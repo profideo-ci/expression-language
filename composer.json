@@ -1,5 +1,5 @@
 {
-    "name": "symfony/expression-language",
+    "name": "profideo-ci/expression-language",
     "type": "library",
     "description": "Symfony ExpressionLanguage Component",
     "keywords": [],
