@@ -122,13 +122,13 @@ class BinaryNode extends Node
             case '!==':
                 return $left !== $right;
             case '<':
-                return $left < $right;
+                return $left < $right && is_numeric($left) && is_numeric($right);
             case '>':
-                return $left > $right;
+                return $left > $right && is_numeric($left) && is_numeric($right);
             case '>=':
-                return $left >= $right;
+                return $left >= $right && is_numeric($left) && is_numeric($right);
             case '<=':
-                return $left <= $right;
+                return $left <= $right && is_numeric($left) && is_numeric($right);
             case 'not in':
                 return !in_array($left, $right);
             case 'in':
