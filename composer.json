@@ -21,6 +21,9 @@
     "require-dev": {
         "symfony/phpunit-bridge": "~2.8|~3.0"
     },
+    "replace": {
+        "symfony/expression-language": "self.version"
+    },
     "autoload": {
         "psr-4": { "Symfony\\Component\\ExpressionLanguage\\": "" }
     },
