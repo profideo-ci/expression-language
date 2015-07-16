@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\ExpressionLanguage\Tests\Node;
+namespace Profideo\Component\ExpressionLanguage\Tests\Node;
 
-use Symfony\Component\ExpressionLanguage\Node\NameNode;
+use Profideo\Component\ExpressionLanguage\Node\NameNode;
 
 class NameNodeTest extends AbstractNodeTest
 {

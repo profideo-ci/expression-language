@@ -1,9 +1,9 @@
 <?php
 
-namespace Symfony\Component\ExpressionLanguage\Tests;
+namespace Profideo\Component\ExpressionLanguage\Tests;
 
-use Symfony\Component\ExpressionLanguage\Node\ConstantNode;
-use Symfony\Component\ExpressionLanguage\ParsedExpression;
+use Profideo\Component\ExpressionLanguage\Node\ConstantNode;
+use Profideo\Component\ExpressionLanguage\ParsedExpression;
 
 class ParsedExpressionTest extends \PHPUnit_Framework_TestCase
 {

@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\ExpressionLanguage\Tests\Node;
+namespace Profideo\Component\ExpressionLanguage\Tests\Node;
 
-use Symfony\Component\ExpressionLanguage\Node\ArrayNode;
-use Symfony\Component\ExpressionLanguage\Node\NameNode;
-use Symfony\Component\ExpressionLanguage\Node\GetAttrNode;
-use Symfony\Component\ExpressionLanguage\Node\ConstantNode;
+use Profideo\Component\ExpressionLanguage\Node\ArrayNode;
+use Profideo\Component\ExpressionLanguage\Node\NameNode;
+use Profideo\Component\ExpressionLanguage\Node\GetAttrNode;
+use Profideo\Component\ExpressionLanguage\Node\ConstantNode;
 
 class GetAttrNodeTest extends AbstractNodeTest
 {

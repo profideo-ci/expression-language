@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\ExpressionLanguage\Tests;
+namespace Profideo\Component\ExpressionLanguage\Tests;
 
-use Symfony\Component\ExpressionLanguage\Lexer;
-use Symfony\Component\ExpressionLanguage\Token;
-use Symfony\Component\ExpressionLanguage\TokenStream;
+use Profideo\Component\ExpressionLanguage\Lexer;
+use Profideo\Component\ExpressionLanguage\Token;
+use Profideo\Component\ExpressionLanguage\TokenStream;
 
 class LexerTest extends \PHPUnit_Framework_TestCase
 {

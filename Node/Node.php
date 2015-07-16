@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\ExpressionLanguage\Node;
+namespace Profideo\Component\ExpressionLanguage\Node;
 
-use Symfony\Component\ExpressionLanguage\Compiler;
+use Profideo\Component\ExpressionLanguage\Compiler;
 
 /**
  * Represents a node in the AST.
@@ -42,7 +42,7 @@ class Node
             $attributes[] = sprintf('%s: %s', $name, str_replace("\n", '', var_export($value, true)));
         }
 
-        $repr = array(str_replace('Symfony\Component\ExpressionLanguage\Node\\', '', get_class($this)).'('.implode(', ', $attributes));
+        $repr = array(str_replace('Profideo\Component\ExpressionLanguage\Node\\', '', get_class($this)).'('.implode(', ', $attributes));
 
         if (count($this->nodes)) {
             foreach ($this->nodes as $node) {

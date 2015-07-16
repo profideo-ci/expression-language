@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\ExpressionLanguage\Node;
+namespace Profideo\Component\ExpressionLanguage\Node;
 
-use Symfony\Component\ExpressionLanguage\Compiler;
+use Profideo\Component\ExpressionLanguage\Compiler;
 
 class NameNode extends Node
 {

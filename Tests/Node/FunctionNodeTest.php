@@ -9,11 +9,11 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\ExpressionLanguage\Tests\Node;
+namespace Profideo\Component\ExpressionLanguage\Tests\Node;
 
-use Symfony\Component\ExpressionLanguage\Node\FunctionNode;
-use Symfony\Component\ExpressionLanguage\Node\ConstantNode;
-use Symfony\Component\ExpressionLanguage\Node\Node;
+use Profideo\Component\ExpressionLanguage\Node\FunctionNode;
+use Profideo\Component\ExpressionLanguage\Node\ConstantNode;
+use Profideo\Component\ExpressionLanguage\Node\Node;
 
 class FunctionNodeTest extends AbstractNodeTest
 {

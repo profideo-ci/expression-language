@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\ExpressionLanguage\Tests\Fixtures;
+namespace Profideo\Component\ExpressionLanguage\Tests\Fixtures;
 
-use Symfony\Component\ExpressionLanguage\ExpressionFunction;
-use Symfony\Component\ExpressionLanguage\ExpressionFunctionProviderInterface;
+use Profideo\Component\ExpressionLanguage\ExpressionFunction;
+use Profideo\Component\ExpressionLanguage\ExpressionFunctionProviderInterface;
 
 class TestProvider implements ExpressionFunctionProviderInterface
 {

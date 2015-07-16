@@ -9,16 +9,16 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\ExpressionLanguage\Tests;
+namespace Profideo\Component\ExpressionLanguage\Tests;
 
-use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
-use Symfony\Component\ExpressionLanguage\Tests\Fixtures\TestProvider;
+use Profideo\Component\ExpressionLanguage\ExpressionLanguage;
+use Profideo\Component\ExpressionLanguage\Tests\Fixtures\TestProvider;
 
 class ExpressionLanguageTest extends \PHPUnit_Framework_TestCase
 {
     public function testCachedParse()
     {
-        $cacheMock = $this->getMock('Symfony\Component\ExpressionLanguage\ParserCache\ParserCacheInterface');
+        $cacheMock = $this->getMock('Profideo\Component\ExpressionLanguage\ParserCache\ParserCacheInterface');
         $savedParsedExpression = null;
         $expressionLanguage = new ExpressionLanguage($cacheMock);
 
@@ -33,7 +33,7 @@ class ExpressionLanguageTest extends \PHPUnit_Framework_TestCase
         $cacheMock
             ->expects($this->exactly(1))
             ->method('save')
-            ->with('1 + 1//', $this->isInstanceOf('Symfony\Component\ExpressionLanguage\ParsedExpression'))
+            ->with('1 + 1//', $this->isInstanceOf('Profideo\Component\ExpressionLanguage\ParsedExpression'))
             ->will($this->returnCallback(function ($key, $expression) use (&$savedParsedExpression) {
                 $savedParsedExpression = $expression;
             }))

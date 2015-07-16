@@ -9,9 +9,9 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\ExpressionLanguage\ParserCache;
+namespace Profideo\Component\ExpressionLanguage\ParserCache;
 
-use Symfony\Component\ExpressionLanguage\ParsedExpression;
+use Profideo\Component\ExpressionLanguage\ParsedExpression;
 
 /**
  * @author Adrien Brault <adrien.brault@gmail.com>

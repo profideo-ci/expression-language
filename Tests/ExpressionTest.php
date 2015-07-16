@@ -1,8 +1,8 @@
 <?php
 
-namespace Symfony\Component\ExpressionLanguage\Tests;
+namespace Profideo\Component\ExpressionLanguage\Tests;
 
-use Symfony\Component\ExpressionLanguage\Expression;
+use Profideo\Component\ExpressionLanguage\Expression;
 
 class ExpressionTest extends \PHPUnit_Framework_TestCase
 {

@@ -9,10 +9,10 @@
  * file that was distributed with this source code.
  */
 
-namespace Symfony\Component\ExpressionLanguage;
+namespace Profideo\Component\ExpressionLanguage;
 
-use Symfony\Component\ExpressionLanguage\ParserCache\ArrayParserCache;
-use Symfony\Component\ExpressionLanguage\ParserCache\ParserCacheInterface;
+use Profideo\Component\ExpressionLanguage\ParserCache\ArrayParserCache;
+use Profideo\Component\ExpressionLanguage\ParserCache\ParserCacheInterface;
 
 /**
  * Allows to compile and evaluate expressions written in your own DSL.
