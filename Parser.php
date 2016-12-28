@@ -26,7 +26,7 @@ class Parser
     const OPERATOR_LEFT = 1;
     const OPERATOR_RIGHT = 2;
 
-    private $stream;
+    protected $stream;
     private $unaryOperators;
     private $binaryOperators;
     private $functions;
