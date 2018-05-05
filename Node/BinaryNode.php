@@ -122,26 +122,90 @@ class BinaryNode extends Node
             case '!==':
                 return $left !== $right;
             case '<':
+                if ('#NC' === $left || '#NC' === $right) {
+                    return false;
+                } elseif ('#NA' === $left || '#NA' === $right) {
+                    return false;
+                } elseif ('#SO' === $left || '#SO' === $right) {
+                    return false;
+                }
+
                 return $left < $right && is_numeric($left) && is_numeric($right);
             case '>':
+                if ('#NC' === $left || '#NC' === $right) {
+                    return false;
+                } elseif ('#NA' === $left || '#NA' === $right) {
+                    return false;
+                } elseif ('#SO' === $left || '#SO' === $right) {
+                    return false;
+                }
+
                 return $left > $right && is_numeric($left) && is_numeric($right);
             case '>=':
+                if ('#NC' === $left || '#NC' === $right) {
+                    return false;
+                } elseif ('#NA' === $left || '#NA' === $right) {
+                    return false;
+                } elseif ('#SO' === $left || '#SO' === $right) {
+                    return false;
+                }
+
                 return $left >= $right && is_numeric($left) && is_numeric($right);
             case '<=':
+                if ('#NC' === $left || '#NC' === $right) {
+                    return false;
+                } elseif ('#NA' === $left || '#NA' === $right) {
+                    return false;
+                } elseif ('#SO' === $left || '#SO' === $right) {
+                    return false;
+                }
+
                 return $left <= $right && is_numeric($left) && is_numeric($right);
             case 'not in':
                 return !in_array($left, $right);
             case 'in':
                 return in_array($left, $right);
             case '+':
+                if ('#NC' === $left || '#NC' === $right) {
+                    return '#NC';
+                } elseif ('#NA' === $left || '#NA' === $right) {
+                    return '#NA';
+                } elseif ('#SO' === $left || '#SO' === $right) {
+                    return '#SO';
+                }
+
                 return $left + $right;
             case '-':
+                if ('#NC' === $left || '#NC' === $right) {
+                    return '#NC';
+                } elseif ('#NA' === $left || '#NA' === $right) {
+                    return '#NA';
+                } elseif ('#SO' === $left || '#SO' === $right) {
+                    return '#SO';
+                }
+
                 return $left - $right;
             case '~':
                 return $left.$right;
             case '*':
+                if ('#NC' === $left || '#NC' === $right) {
+                    return '#NC';
+                } elseif ('#NA' === $left || '#NA' === $right) {
+                    return '#NA';
+                } elseif ('#SO' === $left || '#SO' === $right) {
+                    return '#SO';
+                }
+
                 return $left * $right;
             case '/':
+                if ('#NC' === $left || '#NC' === $right) {
+                    return '#NC';
+                } elseif ('#NA' === $left || '#NA' === $right) {
+                    return '#NA';
+                } elseif ('#SO' === $left || '#SO' === $right) {
+                    return '#SO';
+                }
+
                 return $left / $right;
             case '%':
                 return $left % $right;
