@@ -50,8 +50,10 @@ class Parser
             '|' => array('precedence' => 16,  'associativity' => Parser::OPERATOR_LEFT),
             '^' => array('precedence' => 17,  'associativity' => Parser::OPERATOR_LEFT),
             '&' => array('precedence' => 18,  'associativity' => Parser::OPERATOR_LEFT),
+            '=' => array('precedence' => 20,  'associativity' => Parser::OPERATOR_LEFT),
             '==' => array('precedence' => 20,  'associativity' => Parser::OPERATOR_LEFT),
             '===' => array('precedence' => 20,  'associativity' => Parser::OPERATOR_LEFT),
+            '<>' => array('precedence' => 20,  'associativity' => Parser::OPERATOR_LEFT),
             '!=' => array('precedence' => 20,  'associativity' => Parser::OPERATOR_LEFT),
             '!==' => array('precedence' => 20,  'associativity' => Parser::OPERATOR_LEFT),
             '<' => array('precedence' => 20,  'associativity' => Parser::OPERATOR_LEFT),
@@ -194,20 +196,24 @@ class Parser
 
                     default:
                         if ('(' === $this->stream->current->value) {
-                            if (false === isset($this->functions[$token->value])) {
+                            $functionName = strtoupper($token->value);
+
+                            if (false === isset($this->functions[$functionName])) {
                                 throw new SyntaxError(sprintf('The function "%s" does not exist', $token->value), $token->cursor);
                             }
 
-                            $node = new Node\FunctionNode($token->value, $this->parseArguments());
+                            $node = new Node\FunctionNode($functionName, $this->parseArguments());
                         } else {
-                            if (!in_array($token->value, $this->names, true)) {
+                            $variableName = strtoupper($token->value);
+
+                            if (!in_array($variableName, $this->names, true)) {
                                 throw new SyntaxError(sprintf('Variable "%s" is not valid', $token->value), $token->cursor);
                             }
 
                             // is the name used in the compiled code different
                             // from the name used in the expression?
-                            if (is_int($name = array_search($token->value, $this->names))) {
-                                $name = $token->value;
+                            if (is_int($name = array_search($variableName, $this->names))) {
+                                $name = $variableName;
                             }
 
                             $node = new Node\NameNode($name);
