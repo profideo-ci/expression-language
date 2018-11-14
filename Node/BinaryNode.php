@@ -113,10 +113,12 @@ class BinaryNode extends Node
                 return $left ^ $right;
             case '&':
                 return $left & $right;
+            case '=':
             case '==':
                 return $left == $right && (is_numeric($left) && is_numeric($right) || gettype($left) === gettype($right));
             case '===':
                 return $left === $right;
+            case '<>':
             case '!=':
                 return !($left == $right && (is_numeric($left) && is_numeric($right) || gettype($left) === gettype($right)));
             case '!==':

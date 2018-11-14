@@ -107,7 +107,7 @@ class ExpressionLanguage
      */
     public function register($name, $compiler, $evaluator)
     {
-        $this->functions[$name] = array('compiler' => $compiler, 'evaluator' => $evaluator);
+        $this->functions[strtoupper($name)] = array('compiler' => $compiler, 'evaluator' => $evaluator);
     }
 
     public function addFunction(ExpressionFunction $function)
